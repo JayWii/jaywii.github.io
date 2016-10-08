@@ -207,7 +207,8 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  /*font-family: monospace, monospace;*/
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
   font-size: 1em; }
 
 /* Forms
@@ -605,7 +606,8 @@ footer {
 code, pre {
   padding: 7px;
   font-size: 14px;
-    font-family: 'sourcesanspro', 'Helvetica Neue', Arial, sans-serif;
+  /*font-family: 'sourcesanspro', 'Helvetica Neue', Arial, sans-serif;*/
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
   background: #f8f8f8; }
 
 code {
