@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>女装批发市场</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script type="text/javascript">
+    function loadScript(sScriptSrc,callbackfunction) {
+      //gets document head element
+      var oHead = document.getElementsByTagName('head')[0];
+      if(oHead) {
+        //creates a new script tag
+        var oScript = document.createElement('script');
+        //adds src and type attribute to script tag
+        oScript.setAttribute('src',sScriptSrc);
+        oScript.setAttribute('type','text/javascript');
+        //calling a function after the js is loaded (IE)
+        var loadFunction = function()
+            {
+                if (this.readyState == 'complete' || this.readyState == 'loaded')
+                {
+                    callbackfunction();
+                }
+            };
+        oScript.onreadystatechange = loadFunction;
+        //calling a function after the js is loaded (Firefox)
+        oScript.onload = callbackfunction;
+        //append the script tag to document head element
+        oHead.appendChild(oScript);
+      }
+    }
+    function addEl(data) {
+        var cardGroup = getCardGroup(data);
+        $(cardGroup).appendTo('.detail-wrap');
+    }
+
+    function getCardGroup(data) {
+      var GOODS_ID = 0;
+      var price = 0;
+      if (data.shop_price*1 > 100) {
+        price = data.shop_price * 1.1
+      }else{
+        price = data.shop_price * 1.2
+      }
+      var renderData = {
+        data : data,
+        price : parseFloat((price).toFixed(2)),
+        GOODS_ID : listID + '-' + goodsID
+      }
+      var template = $('#template').html();
+      var html = ejs.render(template, renderData);
+      return html;
+    }
+
+    var fromData = location.href.split('?')[1];
+    var listID = fromData.split('&')[1].replace('list_id=','');
+    var goodsID = fromData.split('&')[0].replace('goods_id=','');
+    function SuccessCallback() {
+      var data = detailData[goodsID];
+      console.log(data);
+      addEl(data);
+    }
+    loadScript('./data/detail/' + listID + '.js',SuccessCallback);
+  </script>
+  <script type="text/template" id="template">
+    <div class="goods-detail-info">
+      <p class="goods-detail-title"><%= data.goods_name %></p>
+      <p class="goods-detail-price">一手货价格：¥ <span class="detail-price"><%= price %></span> 元</p>
+      <p class="GOODS_ID">特价ID：<span><%= GOODS_ID %></span></p>
+      <p class="goods-detail-sale-msg"><%= data.enough_number %>件成团，已拼<%= data.sales %>件<span>成团后48小时内发货</span></p>
+    </div>
+    <div class="goods_detail_img">
+      <div class="goods_detail_img_tit">商品详情</div>
+      <% for(var i=0; i < data.goods_img.length; i++) {%>
+      <img src="<%= data.goods_img[i] %>" alt="图片" style="width:100%">
+      <% } %>
+    </div>
+  </script>
+</head>
+<body>
+  <div class="detail-wrap"></div>
+
+  <script src="./js/zepto.min.js" charset="utf-8"></script>
+  <script src="./js/ejs.min.js" charset="utf-8"></script>
+</body>
+</html>

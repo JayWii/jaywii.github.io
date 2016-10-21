@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>女装批发市场</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script type="text/template" id="template">
+    <a href="<%= './detail.html?goods_id=' + data.goods_id  + '&list_id=' + list_id %>">
+      <li class="goods-card">
+        <div class="goods-card-img" style="background-image:url(<%= data.goods_img %>)">
+        </div>
+        <div class="goods-info">
+          <p class="goods-title"><%= data.goods_name %></p>
+          <p class="goods-price">价格：<%= price %> 元</p>
+          <p class="goods-sale-msg"><%= sale_msg %></p>
+        </div>
+      </li>
+    </a>
+  </script>
+</head>
+<body>
+  <div class="listpage-wrap">
+    <div class="listpage-banner">
+      <img src="" alt="" />
+    </div>
+    <div class="listpage-list-wrap">
+      <ul class="listpage-goods-list"></ul>
+    </div>
+  </div>
+
+  <script src="./js/zepto.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var fromData = location.href.split('?')[1];
+    var listID = fromData.split('&')[0].replace('id=','');
+    var bannerUrl = fromData.split('&')[1].replace('banner=','');
+    $('.listpage-banner img').attr('src',bannerUrl);
+  </script>
+  <script src="./js/ejs.min.js" charset="utf-8"></script>
+  <script src="./data/listJson.js" charset="utf-8"></script>
+  <script src="./js/list.js" charset="utf-8"></script>
+</body>
+</html>

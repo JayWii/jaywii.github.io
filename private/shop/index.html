@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>女装批发市场</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script type="text/template" id="template">
+    <a href="<%= './list.html?id=' + data.special_id + '&banner=' + data.special_thumb %>">
+      <li class="card onsale">
+        <div class="banner">
+          <img src="<%= data.special_thumb %>" alt="" />
+        </div>
+        <div class="info">
+          <p class="title">【<%= data.spacial_title %>】<br/>【<%= data.special_extra_name %>】</p>
+          <% for(var i=0; i < data.special_description.length; i++) {%>
+          <p class="desc"><%= data.special_description[i] %></p>
+          <% } %>
+        </div>
+        <div class="detail">
+          <button>进入专场 GO</button>
+        </div>
+      </li>
+    </a>
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="help-btn active">正在抢购</div>
+    <div class="shop-btn">批发帮助</div>
+  </div>
+  <div class="cont">
+    <div class="goods-list">
+      <ul class="list"></ul>
+    </div>
+    <div class="help">
+      <h3>零、为什么选择我们</h3>
+      <p>作为一个微商，或淘宝卖家，又或者线下实体店经销商，您是否经历过这样的情景：好不容易经过选款式，挑质量通过各种渠道拿到了货源，却发现淘宝上一搜和自己一模一样的有好多页，甚至好多价格比自己更低，千辛万苦销售出去，也只能获取相当稀薄的一点利润，现在，我们为您解决这个问题，我们有着全国最新的好款和爆款，并且从一级代理商直接拿货，为您把关款式和质量的同时，为您提供最低的价格！</p>
+      <h3>一、我们的货源</h3>
+      <p>广州是全国最大的服装批发市场，我们有众多广州及广州周边的一级批发市场合作商家提供市场最新的好款和爆款，货源包括广州十三行、沙河等，这里提供着全国80%的服装货源。</p>
+      <h3>二、关于价格</h3>
+      <p>我们为您提供广州最新的一批货源，价格比到二级代理批发节约30%甚至更多，哪怕您不能亲自到广州，也能通过我们这里下单拿货，避免了通过二级代理，三级代理甚至更多层级拿到利润稀薄的货物。我们有行业顶级买手每天为您到批发市场发现最新好款，把关质量，并拍照回来，提供给各位拼货批发，每天专场结束后照各位店主所下订单，统一到档口采购发货</p>
+      <h3>三、关于淘宝</h3>
+      <p>我们提供的货物绝大部分为独家销售的最新款，保证您拿到货物后绝不会发现淘宝上到处是同款，即使偶尔发现有淘宝同款，我们也给您保证我们的价格绝对比淘宝更低，保障您为您的客户提供独一无二的优质衣物。</p>
+      <h3>四、关于拼货</h3>
+      <p>由于一级批发市场都对拿货量有严格限制，一般都是10件起拿，所以我们采取让大家拼货的形式，每个人根据自己需求选取货物和数量进行购买，每天专场结束后达到起批要求的我们就会进行发货，没有达到起批要求的我们会一分不差地给您退款。</p>
+      <h3>五、如何订货</h3>
+      <p>我们每天会在这里公布当天最新的货源，您根据自己需要选好想要的货源之后，把自己所需货物的货品码（货品码在货品详情页查看或通过微信向客服询问）和所需颜色，尺码，数量，一一对应发到客服微信并转账后客服将跟您确认并为您订货，假如缺货或未满足批发数量需求，会在一天以内为您全额退款。</p>
+      <h3>六、联系方式</h3>
+      <p>添加微信号：TheTimeWithHoney</p>
+      <p>或扫描下面微信二维码咨询</p>
+      <img src="./wechat.png" alt="wechat" />
+    </div>
+  </div>
+  <script src="./js/zepto.min.js" charset="utf-8"></script>
+  <script src="./js/ejs.min.js" charset="utf-8"></script>
+  <script src="./data/cateJson.js" charset="utf-8"></script>
+  <script src="./js/index.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+/*header*/
+body {
+	background-color: #F3F3F3;
+}
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	height: 40px;
+	background-color: rgba(255,255,255,0.9);
+}
+.header div {
+	float: left;
+	width: 50%;
+	text-align: center;
+	line-height: 40px;
+	color: #777;
+	cursor: pointer;
+}
+.header .active {
+	color: #FF0000;
+	line-height: 38px;
+	border-bottom: 2px solid #FF0000;
+}
+.goods-list, .help {
+	padding-top: 70px;
+}
+.goods-list, .help{
+	max-width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.list {
+	overflow: hidden;
+}
+.list a {
+	display: block;
+	width: 46.8%;
+	margin: 1%;
+	float: left;
+}
+.list li {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 3px 3px #ccc;
+	overflow: hidden;
+	box-sizing: border-box;
+	position: relative;
+}
+.list li .banner {
+	width: 100%;
+	/*background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;*/
+}
+.banner img {
+	width: 100%;
+}
+.list li .info {
+	padding: 20px 20px 60px 20px;
+	box-sizing: border-box;
+	line-height: 1.5;
+	height: 205px;
+	max-height: 205px;
+	overflow: hidden;
+}
+.list li .info .desc {
+	color: #777;
+	font-size: 0.8rem;
+}
+.list li .info .title {
+	padding-bottom: 10px;
+	font-size: 0.9rem;
+}
+.list li .detail {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	bottom: 0;
+}
+.list li .detail button {
+	width: 100%;
+	height: 40px;
+	border: none;
+	background-color: #EC7133;
+	color: #fff;
+	font-size: 1rem;
+}
+.help {
+	display: none;
+	padding-bottom: 40px;
+}
+.help h3 {
+	font-size: 1.2rem;
+	color: #EC7133;
+	padding-bottom: 20px;
+}
+.help p {
+	line-height: 1.5;
+	padding-bottom: 30px;
+}
+@media screen and (max-width: 720px){
+	.goods-list{
+		padding-top: 40px;
+	}
+	.help {
+		padding: 10px;
+		padding-top: 60px;
+	}
+	.help img {
+		width: 80%;
+	}
+	.list a {
+		width: 100%;
+		margin: 0;
+		margin-bottom: 20px;
+		float: none;
+	}
+	.list li {
+		border-radius: 0;
+		box-shadow: 0 3px 4px #ccc;
+	}
+	.list li .info {
+		font-size: 0.8rem;
+		line-height: 1.5;
+		height: auto;
+		max-height: auto;
+		padding: 10px 10px 50px 10px;
+	}
+	.list li .detail {
+    height: 30px;
+	}
+	.list li .detail button {
+		height: 30px;
+		font-size: 0.9rem;
+	}
+}
+/*list.html*/
+.listpage-wrap {
+	max-width: 960px;
+	margin: 0 auto 20px;
+}
+.listpage-banner {
+	margin-bottom: 10px;
+}
+.listpage-banner img {
+	width: 100%;
+}
+.listpage-list-wrap {
+	padding: 0 5px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.listpage-goods-list a {
+	display: block;
+	overflow: hidden;
+}
+.listpage-goods-list {
+	overflow: hidden;
+}
+.goods-card-img {
+	width: 100%;
+	height: 165px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.goods-card {
+	background-color: #F9F9F9;
+	border-radius: 3px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+}
+.goods-price {
+	color: #EC7133;
+	padding: 5px 0;
+	font-weight: bold;
+}
+.goods-sale-msg {
+	line-height: 18px;
+	padding: 1px 0;
+	text-align: center;
+	background-color: #EC7133;
+	border-radius: 5px;
+	color: #fff;
+}
+@media screen and (max-width: 720px){
+	.goods-card {
+		min-height: 225px;
+		max-height: 225px;
+	}
+	.listpage-goods-list a {
+		float: left;
+		width: 48%;
+		margin: 3px 1%;
+	}
+	.goods-card-img {
+		max-height: 150px;
+		overflow: hidden;
+	}
+	.goods-info {
+		font-size: 0.5rem;
+		padding: 5px;
+		box-sizing: border-box;
+	}
+	.goods-info .num {
+		color: #fff;
+	}
+	.goods-title {
+		display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+	}
+}
+/*detail.html*/
