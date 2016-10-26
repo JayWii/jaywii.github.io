@@ -15,6 +15,7 @@ function getCardGroup(data) {
   }else {
     msg = '已售出' + data.sales + '件,差' + data.enough_number + '件成团'
   }
+  msg = '立即抢购!'
   if (data.shop_price*1 > 100) {
     price = data.shop_price * 1.1
   }else{
