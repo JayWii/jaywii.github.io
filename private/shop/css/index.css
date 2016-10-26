@@ -250,7 +250,7 @@ body {
 		overflow: hidden;
 	}
 	.goods-info {
-		font-size: 0.9rem;
+		font-size: 12px;
 		padding: 5px;
 		box-sizing: border-box;
 	}
@@ -294,10 +294,7 @@ body {
 	font-size: 0.9rem;
 	padding: 10px 0;
 	box-sizing: border-box;
-}
-.goods-detail-sale-msg span {
-	color: #EC7133;
-	margin: 0 5px;
+	line-height: 1.5;
 }
 .goods_detail_img_tit {
 	padding: 10px 0 5px 10px;
