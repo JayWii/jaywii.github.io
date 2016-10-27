@@ -205,23 +205,30 @@ body {
 .listpage-goods-list a {
 	display: block;
 	overflow: hidden;
+	float: left;
+	width: 23%;
+	margin: 5px 1%;
 }
 .listpage-goods-list {
 	overflow: hidden;
 }
 .goods-card-img {
 	width: 100%;
-	height: 165px;
+	height: 210px;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	overflow: hidden;
 }
 .goods-card {
 	background-color: #F9F9F9;
 	border-radius: 3px;
 	overflow: hidden;
 	border: 1px solid #ccc;
+	min-height: 300px;
+	max-height: 300px;
 }
+
 .goods-price {
 	color: #EC7133;
 	padding: 5px 0;
@@ -235,37 +242,42 @@ body {
 	border-radius: 5px;
 	color: #fff;
 }
+.goods-title {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.goods-info {
+	font-size: 16px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+.goods-info .num {
+	color: #fff;
+}
 @media screen and (max-width: 720px){
 	.goods-card {
 		min-height: 225px;
 		max-height: 225px;
 	}
 	.listpage-goods-list a {
-		float: left;
 		width: 48%;
 		margin: 3px 1%;
 	}
 	.goods-card-img {
 		max-height: 150px;
-		overflow: hidden;
 	}
 	.goods-info {
 		font-size: 12px;
-		padding: 5px;
-		box-sizing: border-box;
-	}
-	.goods-info .num {
-		color: #fff;
-	}
-	.goods-title {
-		display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
 	}
 }
 /*detail.html*/
+.detail-wrap {
+	max-width: 960px;
+	margin: 0 auto 20px;
+}
 .goods-detail-info {
 	background-color: #fff;
 	/* box-shadow: 0 2px 3px #ccc; */
