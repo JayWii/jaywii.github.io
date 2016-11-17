@@ -632,6 +632,7 @@ code {
     font-weight: bold;
     color: #cacaca;
     background: #EDEDED;
+    box-sizing: border-box;
     content: 'CODE'; }
   .highlight.html::after {
     content: "HTML"; }
@@ -684,6 +685,7 @@ code {
     margin: 0;
     padding: 0;
     width: 100%;
+    background: #f8f8f8; 
     border-collapse: collapse; }
   .highlight .code .comment,
   .highlight .code .quote {
