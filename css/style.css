@@ -490,8 +490,13 @@ footer {
       transform: translateY(-5px); }
 
 .post {
-  padding-top: 1em;
-  padding-bottom: 2em; }
+  padding: 1em;
+  background: #fff;
+  box-sizing: border-box;
+  margin: 1em 0;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px #ccc;
+ }
   .post .post-title {
     margin: 0px;
     font-weight: 600;
@@ -685,7 +690,7 @@ code {
     margin: 0;
     padding: 0;
     width: 100%;
-    background: #f8f8f8; 
+    background: #f8f8f8;
     border-collapse: collapse; }
   .highlight .code .comment,
   .highlight .code .quote {
