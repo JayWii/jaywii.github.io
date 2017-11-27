@@ -7,7 +7,41 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="format-detection" content="telephone=no, email=no">
-<title>myPhotoSwipe</title>
+<title>photo-package-demo</title>
+<style>
+div.preview-img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0;
+}
+img.preview-img {
+    width: 100px;
+    margin-right: 15px;
+}
+.demo-gallery{
+    overflow:hidden;
+    font-size: 0;
+}
+#demo-test-gallery a{
+    float:left;
+    margin:0 2px 2px;
+    width: 120px;
+}
+#demo-test-gallery a img{
+    width:100%;
+}
+#demo-test-gallery a figure{
+    display: none;
+}
+#demo-test-gallery a:first-child{
+    width:164px;
+}
+</style>
 </head>
 <body>
 <div id="demogallery">
@@ -58,40 +92,5 @@ window.onload = function () {
     })
 }
 </script>
-
-<style>
-div.preview-img{
-    width: 100px;
-    height: 100px;
-    float: left;
-    margin-right: 15px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #f0f0f0;
-}
-img.preview-img {
-    width: 100px;
-    margin-right: 15px;
-}
-.demo-gallery{
-    overflow:hidden;
-    font-size: 0;
-}
-#demo-test-gallery a{
-    float:left;
-    margin:0 2px 2px;
-    width: 120px;
-}
-#demo-test-gallery a img{
-    width:100%;
-}
-#demo-test-gallery a figure{
-    display: none;
-}
-#demo-test-gallery a:first-child{
-    width:164px;
-}
-</style>
 <script type="text/javascript" src="build.js"></script></body>
 </html>
